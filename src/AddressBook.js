@@ -63,9 +63,11 @@ class AddressBook extends React.Component{
                             this.state.items.map(todo =>{
                                 return(
                                     <TodoElement key={todo.id}>
-                                        <img
+                                        {/*Add delete function*/}
+                                        <input
+                                            type="image"
                                             src={Cancel}
-                                            style={{float: "right"}}
+                                            style={{float : "right", width : "30px"}}
                                         />
                                         <p>{todo.login}</p>
                                         <p>{todo.email}</p>
@@ -74,8 +76,11 @@ class AddressBook extends React.Component{
                             })
                         }
                     </ul>
-                    <Link style={{display: "block", textAlign : "center", backgroundColor : "silver", }} to="/New">
-                        <input type="image" src={Add} width="10px"/>
+                    <Link style={{display : "block", textAlign : "center", backgroundColor : "silver", }} to="/New">
+                        <img
+                            src={Add}
+                            style={{width : "25px", marginTop : "5px"}}
+                        />
                     </Link>
                 </Form>
             </div>
