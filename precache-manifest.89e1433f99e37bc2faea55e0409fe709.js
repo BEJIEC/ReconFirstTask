@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/ReconFirstTask/static/js/runtime~main.022e3fa9.js"
   },
   {
-    "revision": "1f2fa9e53888cc6efac7",
-    "url": "/ReconFirstTask/static/js/main.1f2fa9e5.chunk.js"
+    "revision": "2f37975663071c2cd15f",
+    "url": "/ReconFirstTask/static/js/main.2f379756.chunk.js"
   },
   {
-    "revision": "07b5dc41a5cf22b07c42",
-    "url": "/ReconFirstTask/static/js/1.07b5dc41.chunk.js"
+    "revision": "9db5e3448cab89cd6832",
+    "url": "/ReconFirstTask/static/js/1.9db5e344.chunk.js"
   },
   {
-    "revision": "1f2fa9e53888cc6efac7",
-    "url": "/ReconFirstTask/static/css/main.7cb91e08.chunk.css"
+    "revision": "2f37975663071c2cd15f",
+    "url": "/ReconFirstTask/static/css/main.8c9f74e1.chunk.css"
   },
   {
-    "revision": "399bc2bcfb57f942cbcc3422841980b7",
+    "revision": "c61b9e5c891fa84cc277150a6dd6e45f",
     "url": "/ReconFirstTask/index.html"
   }
 ];

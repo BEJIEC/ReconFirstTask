@@ -1,15 +1,15 @@
 {
-  "main.css": "/ReconFirstTask/static/css/main.7cb91e08.chunk.css",
-  "main.js": "/ReconFirstTask/static/js/main.1f2fa9e5.chunk.js",
-  "main.js.map": "/ReconFirstTask/static/js/main.1f2fa9e5.chunk.js.map",
-  "static/js/1.07b5dc41.chunk.js": "/ReconFirstTask/static/js/1.07b5dc41.chunk.js",
-  "static/js/1.07b5dc41.chunk.js.map": "/ReconFirstTask/static/js/1.07b5dc41.chunk.js.map",
+  "main.css": "/ReconFirstTask/static/css/main.8c9f74e1.chunk.css",
+  "main.js": "/ReconFirstTask/static/js/main.2f379756.chunk.js",
+  "main.js.map": "/ReconFirstTask/static/js/main.2f379756.chunk.js.map",
+  "static/js/1.9db5e344.chunk.js": "/ReconFirstTask/static/js/1.9db5e344.chunk.js",
+  "static/js/1.9db5e344.chunk.js.map": "/ReconFirstTask/static/js/1.9db5e344.chunk.js.map",
   "runtime~main.js": "/ReconFirstTask/static/js/runtime~main.022e3fa9.js",
   "runtime~main.js.map": "/ReconFirstTask/static/js/runtime~main.022e3fa9.js.map",
-  "static/css/main.7cb91e08.chunk.css.map": "/ReconFirstTask/static/css/main.7cb91e08.chunk.css.map",
+  "static/css/main.8c9f74e1.chunk.css.map": "/ReconFirstTask/static/css/main.8c9f74e1.chunk.css.map",
   "static/media/cancel.svg": "/ReconFirstTask/static/media/cancel.41125cd8.svg",
   "static/media/plus.svg": "/ReconFirstTask/static/media/plus.c2d47e3b.svg",
   "index.html": "/ReconFirstTask/index.html",
-  "precache-manifest.a46770a0b93a58320935825ded85b0ed.js": "/ReconFirstTask/precache-manifest.a46770a0b93a58320935825ded85b0ed.js",
+  "precache-manifest.89e1433f99e37bc2faea55e0409fe709.js": "/ReconFirstTask/precache-manifest.89e1433f99e37bc2faea55e0409fe709.js",
   "service-worker.js": "/ReconFirstTask/service-worker.js"
 }
