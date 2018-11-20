@@ -2,45 +2,35 @@ import React from 'react'
 import style from 'styled-components/'
 import FirestoreWorker from './FirestoreWorker.js'
 import {Link} from 'react-router-dom'
-import './index.css'
+import './resources/index.css'
 import {currentEditingUser} from "./AddressBook.js";
+import {StyledForm} from "./SyledForm.js";
+import {StyledHeader} from "./StyledHeader.js"
 
 const Button = style.button`
 
-    border-radius: 7px;
+    border-radius: 5px;
     background-color: ${props => props.color};  
     float: ${props => props.delete ? "left" : "right"}
-    margin: 5px auto;
+    margin: 7px 10px;
     outline: none;
+    font-style: italic;
     
 `;
 
 const TextField = style.input`
 
-    width: 100%;
-    margin: 5px auto;
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px 5px;
     display: block;
-    border: 2px solid silver;
-    border-color: ${props => props.validity ? 'green' : 'red'};
+    border: 2px solid ${props => props.validity ? 'green' : 'silver'};
+    border-radius: 10px;
     outline: none;
+    box-shadow: 1px 1px 3px 1px;
     
 `;
 
-const Form = style.form`
-
-    width: 300px;
-    height: 400px;
-    float: right;
-    margin-right: 200px;
-    border: 
-
-`;
-
-const Header = style.h1`
-
-    text-align: center
-    
-`;
 export class AddressBookEdit extends React.Component{
 
     constructor(props){
@@ -126,14 +116,14 @@ export class AddressBookEdit extends React.Component{
     //EDIT
     render(){
         return (
-                <Form onSubmit={this.handleSubmit}>
-                    <Header>My Address Book/Edit Contact</Header>
+                <StyledForm className="right" onSubmit={this.handleSubmit}>
+                    <StyledHeader>Edit Contact</StyledHeader>
                     <TextField value={this.state.login} validity={this.state.loginValid} onChange={this.loginValueChanged} placeholder="Name"/>
                     <TextField value={this.state.email} validity={this.state.emailValid} onChange={this.emailValueChanged} placeholder="E-mail"/>
                     <Button onClick={this.deleteUser} delete color="red"><Link to="/">Delete</Link></Button>
                     <Button color="white"><Link to="/">Cancel</Link></Button>
                     <Button onClick={this.editUser} color="green"><Link to="/">Ok</Link></Button>
-                </Form>
+                </StyledForm>
         )
     }
 }
@@ -215,13 +205,13 @@ export class AddressBookNew extends React.Component{
     //NEW
     render(){
         return (
-                <Form onSubmit={this.handleSubmit}>
-                    <Header>My Address Book/Edit Contact</Header>
+                <StyledForm className="right" onSubmit={this.handleSubmit}>
+                    <StyledHeader>New Contact</StyledHeader>
                     <TextField value={this.state.login} validity={this.state.loginValid} onChange={this.loginValueChanged} placeholder="Name"/>
                     <TextField value={this.state.email} validity={this.state.emailValid} onChange={this.emailValueChanged} placeholder="E-mail"/>
                     <Button color="white"><Link to="/">Cancel</Link></Button>
                     <Button onClick={this.addUser} color="green"><Link to="/">Ok</Link></Button>
-                </Form>
+                </StyledForm>
         )
     }
 }

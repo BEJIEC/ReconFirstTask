@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin: 4px 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    height: 250px;
+}
+
+.secondChild {
+    background-color: #D3D6D1;
+}

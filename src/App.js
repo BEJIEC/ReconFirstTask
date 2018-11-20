@@ -6,21 +6,24 @@ import AddressBook from "./AddressBook"
 import {Provider} from 'mobx-react'
 import LocalStore from './LocalStore.js'
 import FirestoreWorker from './FirestoreWorker.js'
+import {AdaptiveWrapper} from "./AdaptiveWrapper.js";
 
 export const localStore = new LocalStore();
 
-class App extends React.Component{
+class App extends React.Component {
 
-    render (){
+    render() {
         return (
             <Provider store={localStore} worker={FirestoreWorker}>
-                <BrowserRouter>
-                    <div>
-                        <Route path="/" component={AddressBook}/>
-                        <Route exact path="/New" component={AddressBookNew}/>
-                        <Route exact path="/Edit" component={AddressBookEdit}/>
-                    </div>
-                </BrowserRouter>
+                <AdaptiveWrapper>
+                    <BrowserRouter>
+                        <div>
+                            <Route path="/" component={AddressBook}/>
+                            <Route exact path="/New" component={AddressBookNew}/>
+                            <Route exact path="/Edit" component={AddressBookEdit}/>
+                        </div>
+                    </BrowserRouter>
+                </AdaptiveWrapper>
             </Provider>
         )
     }

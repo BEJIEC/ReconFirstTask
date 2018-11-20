@@ -7,28 +7,26 @@ import {observer} from 'mobx-react'
 import {localStore} from "./App.js";
 import {collection} from "./FirestoreWorker.js";
 import FirestoreWorker from "./FirestoreWorker.js"
-
-const Form = style.form`
-
-    width: 300px;
-    float: left;
-    
-`;
-
-const Header = style.h1`
-
-    text-align: center;
-    
-    
-`;
+import './resources/index.css'
+import {StyledForm} from "./SyledForm.js";
+import {StyledHeader} from "./StyledHeader.js";
 
 const UserItem = style.li`
 
     list-style: none;
     list-style-position: inside;
     border: 2px solid silver;
-    margin: 1px -2px;
-    width: 100%;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin: 2px 2%;
+    width: 90%;
+
+`;
+
+const Table = style.ul`
+
+    padding: 0;
+    margin: 0;
 
 `;
 
@@ -43,6 +41,8 @@ class AddressBook extends React.Component{
         this.state = {
             users : localStore.users,
         };
+
+        this.i = 0;
 
         collection.get().then(querySnapshot =>{
             querySnapshot.forEach(userDoc => {
@@ -79,13 +79,15 @@ class AddressBook extends React.Component{
     render(){
         return (
             <div>
-                <Form>
-                    <Header>My Address Book</Header>
-                    <ul>
+                <StyledForm className="left">
+                    <StyledHeader>My Address Book</StyledHeader>
+                    <Table className="table">
                         {
                             this.state.users.map(user => {
+                                this.i++;
+
                                 return(
-                                    <UserItem key={user.userRef}>
+                                    <UserItem className={(this.i%2 == 0) ? "secondChild" : null} key={user.userRef}>
                                         <div style={{width : "100%"}}>
                                         <Link
                                             to=""
@@ -104,14 +106,14 @@ class AddressBook extends React.Component{
                                 )
                             })
                         }
-                    </ul>
+                    </Table>
                     <Link style={{display : "block", textAlign : "center", backgroundColor : "silver", }} to="/New">
                         <img
                             src={Add}
                             style={{width : "20px", marginTop : "5px"}}
                         />
                     </Link>
-                </Form>
+                </StyledForm>
             </div>
         )
     }

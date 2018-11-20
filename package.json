@@ -2,6 +2,7 @@
   "name": "firsttaskrecon2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://bejiec.github.io/ReconFirstTask",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
@@ -63,7 +64,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -73,8 +76,7 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
-  ,
+  ],
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.47",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
@@ -88,7 +90,8 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0-beta.47",
     "@babel/preset-env": "^7.0.0-beta.47",
-    "@babel/preset-react": "^7.0.0-beta.47"
+    "@babel/preset-react": "^7.0.0-beta.47",
+    "gh-pages": "^2.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
