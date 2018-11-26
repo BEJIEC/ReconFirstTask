@@ -1,5 +1,3 @@
-import style from 'styled-components';
-import {localStore} from "./App.js";
 import React from 'react';
 import {TextField} from "./TextField.js";
 

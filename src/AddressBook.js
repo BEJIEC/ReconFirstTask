@@ -90,18 +90,22 @@ class AddressBook extends React.Component{
 
 
     render(){
+        let i = 0;
+
         return (
             <div>
                 <StyledForm className="left">
                     <StyledHeader>My Address Book</StyledHeader>
-                    <img src={Search} width="30px" style={{float: "left", marginLeft: "10px"}}/>
-                    <FindingField filter={this.filterUsers}/>
+                    <div>
+                        <img src={Search} width="30px" style={{float: "left", marginLeft: "10px"}}/>
+                        <FindingField filter={this.filterUsers}/>
+                    </div>
                     <Table className="table">
                         {
                             this.state.users.map(user => {
-
+                                i++;
                                 return(
-                                    <UserItem className={(this.i%2 == 0) ? "secondChild" : null} key={user.userRef}>
+                                    <UserItem className={(i%2 == 0) ? "secondChild" : null} key={user.userRef}>
                                         <div style={{width : "100%"}}>
                                         <Link
                                             to=""

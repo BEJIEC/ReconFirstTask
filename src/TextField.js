@@ -2,8 +2,8 @@ import style from "styled-components";
 
 export const TextField = style.input`
 
-    width: 80%;
-    margin: 10px auto;
+    width: 70%;
+    margin: 10px 15%;
     padding: 5px 5px;
     display: block;
     border: 2px solid ${props => props.validity ? 'green' : 'silver'};
