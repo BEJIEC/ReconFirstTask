@@ -25,4 +25,8 @@ export default class LocalStore {
         }
     }
 
+    changeUsers(filtered){
+        this.users = filtered.slice();
+    }
+
 }

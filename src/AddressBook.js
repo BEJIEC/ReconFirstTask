@@ -10,6 +10,8 @@ import FirestoreWorker from "./FirestoreWorker.js"
 import './resources/index.css'
 import {StyledForm} from "./SyledForm.js";
 import {StyledHeader} from "./StyledHeader.js";
+import FindingField from "./FindingField.js";
+import Search from "./resources/search.svg"
 
 const UserItem = style.li`
 
@@ -35,14 +37,14 @@ export var currentEditingUser;
 @observer
 class AddressBook extends React.Component{
 
+    initialUsers = localStore.users;
+
     constructor(props) {
         super(props);
 
         this.state = {
             users : localStore.users,
         };
-
-        this.i = 0;
 
         collection.get().then(querySnapshot =>{
             querySnapshot.forEach(userDoc => {
@@ -59,6 +61,7 @@ class AddressBook extends React.Component{
         });
 
         this.deleteUser = this.deleteUser.bind(this);
+        this.filterUsers = this.filterUsers.bind(this);
     }
 
     deleteUser(userRef){
@@ -76,15 +79,26 @@ class AddressBook extends React.Component{
         }
     }
 
+    filterUsers(filterText){
+
+        this.setState({
+            users : this.initialUsers.filter(user =>{
+                return user.login.includes(filterText) || user.email.includes(filterText);
+            })
+        })
+    }
+
+
     render(){
         return (
             <div>
                 <StyledForm className="left">
                     <StyledHeader>My Address Book</StyledHeader>
+                    <img src={Search} width="30px" style={{float: "left", marginLeft: "10px"}}/>
+                    <FindingField filter={this.filterUsers}/>
                     <Table className="table">
                         {
                             this.state.users.map(user => {
-                                this.i++;
 
                                 return(
                                     <UserItem className={(this.i%2 == 0) ? "secondChild" : null} key={user.userRef}>

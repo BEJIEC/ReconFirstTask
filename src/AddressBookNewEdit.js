@@ -6,6 +6,7 @@ import './resources/index.css'
 import {currentEditingUser} from "./AddressBook.js";
 import {StyledForm} from "./SyledForm.js";
 import {StyledHeader} from "./StyledHeader.js"
+import {TextField} from "./TextField.js"
 
 const Button = style.button`
 
@@ -15,19 +16,6 @@ const Button = style.button`
     margin: 7px 10px;
     outline: none;
     font-style: italic;
-    
-`;
-
-const TextField = style.input`
-
-    width: 90%;
-    margin: 10px auto;
-    padding: 5px 5px;
-    display: block;
-    border: 2px solid ${props => props.validity ? 'green' : 'silver'};
-    border-radius: 10px;
-    outline: none;
-    box-shadow: 1px 1px 3px 1px;
     
 `;
 
